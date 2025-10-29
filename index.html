@@ -1,14 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document AI Processing</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>AI-Powered Document Processing</h1>
-    <input type="file" id="fileInput" accept="image/*">
-    <div id="output"></div>
-    
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Granite Docling — WebGPU (Browser)</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loading overlay shown while the model downloads -->
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <h2>Loading model…</h2>
+      <p>This downloads to your browser cache (first time only).</p>
+      <progress id="progress" value="0" max="100"></progress>
+      <div id="progressText">0%</div>
+      <div id="deviceNote"></div>
+    </div>
+
+    <main class="container">
+      <h1>Granite Docling 258M (Browser, WebGPU)</h1>
+
+      <section class="panel">
+        <label class="filelabel">
+          <input id="fileInput" type="file" accept="image/*" />
+          <span>Choose an image…</span>
+        </label>
+
+        <div class="row">
+          <input id="prompt" class="prompt" type="text"
+                 value="Convert this page to docling." />
+          <button id="runBtn" disabled>Run</button>
+        </div>
+
+        <div id="previewWrap" class="preview hidden">
+          <img id="preview" alt="preview" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Output (raw Docling text)</h2>
+        <pre id="out" class="out"></pre>
+      </section>
+    </main>
+
     <script type="module" src="js/app.js"></script>
-</body>
+  </body>
 </html>

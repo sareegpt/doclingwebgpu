@@ -144,6 +144,50 @@ body {
 .model-menu button:hover { background: rgba(255,255,255,0.06); }
 .model-menu button small { color: var(--muted); margin-left: 4px; }
 
+/* Trust / privacy banners */
+.trust-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.18);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trust-banner svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #4ade80;
+}
+.trust-banner span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+}
+.trust-bar svg {
+  flex-shrink: 0;
+  color: #4ade80;
+}
+.trust-bar span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 .built-with {
   font-size: 13px;
   color: var(--muted);

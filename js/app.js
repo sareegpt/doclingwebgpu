@@ -33,11 +33,12 @@ const modelTag    = document.getElementById("modelTag");
 const DEVICE = navigator?.gpu ? "webgpu" : "wasm";
 
 const MODELS = {
-  "onnx-community/Qwen3.5-0.8B-ONNX": { label: "0.8B", size: "~500 MB" },
+  "onnx-community/Qwen3.5-4B-ONNX":   { label: "4B",   size: "~2.5 GB" },
   "onnx-community/Qwen3.5-2B-ONNX":   { label: "2B",   size: "~1.3 GB" },
+  "onnx-community/Qwen3.5-0.8B-ONNX": { label: "0.8B", size: "~500 MB" },
 };
 
-let selectedModel = "onnx-community/Qwen3.5-0.8B-ONNX";
+let selectedModel = "onnx-community/Qwen3.5-4B-ONNX";
 let processor = null;
 let model = null;
 let isGenerating = false;

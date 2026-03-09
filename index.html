@@ -44,12 +44,13 @@
 
         <div class="load-row">
           <button id="loadBtn" class="load-btn">
-            <span id="loadBtnLabel">Load Model (0.8B)</span>
+            <span id="loadBtnLabel">Load Model (4B)</span>
             <span class="caret">&#9662;</span>
           </button>
           <div id="modelMenu" class="model-menu hidden">
+            <button data-model="onnx-community/Qwen3.5-4B-ONNX" data-label="4B">Qwen 3.5 — 4B <small>(recommended)</small></button>
+            <button data-model="onnx-community/Qwen3.5-2B-ONNX" data-label="2B">Qwen 3.5 — 2B <small>(faster)</small></button>
             <button data-model="onnx-community/Qwen3.5-0.8B-ONNX" data-label="0.8B">Qwen 3.5 — 0.8B <small>(fastest)</small></button>
-            <button data-model="onnx-community/Qwen3.5-2B-ONNX" data-label="2B">Qwen 3.5 — 2B <small>(better quality)</small></button>
           </div>
         </div>
 
